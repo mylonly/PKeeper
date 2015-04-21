@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_top_margin">24dp</dimen>
+    <dimen name="activity_empty_margin">12dp</dimen>
+    <dimen name="theme_padding">12dp</dimen>
+    <dimen name="loadpic_wh">60dp</dimen>
+    <dimen name="main_height">48dp</dimen>
+    <dimen name="textsize_bigger">20sp</dimen>
+    <dimen name="textsize_small">13sp</dimen>
+</resources>

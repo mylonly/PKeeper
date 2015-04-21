@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+	    <TextView 
+	        android:id="@+id/house_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="@dimen/theme_padding"
+	        android:ellipsize="end"
+	        android:textColor="#000000"
+	        android:text="aaaaaaaa"
+	        android:layout_centerVertical="true"  />
+		<TextView 
+	        android:id="@+id/house_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/house_type"
+	        android:gravity="right"
+	        android:padding="@dimen/theme_padding"
+	        android:ellipsize="end"
+	        android:textColor="@color/gray"
+	        android:text="bbbbbbb" />
+	    <ImageView
+	        android:id="@+id/iv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/keepinfo_10" />
+    
+</RelativeLayout>

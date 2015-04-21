@@ -1,0 +1,70 @@
+10
+
+dir
+105
+svn://txg@www.mylonly.com/repositories/PKeeper/IOS/PKeeper/PKeeper/Vendor
+svn://txg@www.mylonly.com/repositories
+
+
+
+2015-04-20T15:33:30.102201Z
+102
+txg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c71868d5-da94-48e0-8c58-c8d90a7df4e4
+
+HttpHelper
+dir
+
+BBYGridImageView
+dir
+
+Helpers
+dir
+
+UpYunSDK2.0
+dir
+
+MBProgressHUD
+dir
+
+XHImageViewer
+dir
+
+ASIHttpRequest
+dir
+
+EGORefreshTableCtrl
+dir
+
+QBImagePickerController
+dir
+
+SDWebImage
+dir
+
+Date&AreaPicker
+dir
+
+LCSegmentedControl
+dir
+
+GCPlaceholderTextView
+dir
+
+TouchJSON
+dir
+

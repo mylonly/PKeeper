@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background_color" >
+    
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/titleview" >
+	    <LinearLayout
+	        android:id="@+id/business_type"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:layout_marginRight="@dimen/activity_horizontal_margin" >
+	
+	        <RelativeLayout
+	            android:id="@+id/business_type0"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:layout_marginLeft="@dimen/activity_empty_margin" >
+	
+	        	<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@color/white"
+	                android:text="@string/businessinfo1" />
+	
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/business_type1"
+	            android:layout_width="0dp"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="1"
+	        	android:layout_marginLeft="@dimen/activity_empty_margin" >
+	        	<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@color/white"
+	                android:text="@string/businessinfo2" />
+	
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/business_type2"
+	            android:layout_width="0dp"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="1"
+	        	android:layout_marginLeft="@dimen/activity_empty_margin" >
+	        	<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@color/white"
+	                android:text="@string/businessinfo3" />
+	
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/business_type3"
+	            android:layout_width="0dp"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="1"
+	        	android:layout_marginLeft="@dimen/activity_empty_margin" >
+	        	<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@color/white"
+	                android:text="@string/businessinfo4" />
+	
+	        </RelativeLayout>
+	        
+	    </LinearLayout>
+	    <com.cheng.pkeeper.util.PullToRefreshListView
+	            android:id="@+id/business_info"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_below="@+id/business_type"
+	            android:layout_marginTop="@dimen/activity_empty_margin"
+		        android:layout_marginRight="@dimen/activity_empty_margin"
+		        android:layout_marginLeft="@dimen/activity_empty_margin"
+		        android:dividerHeight="@dimen/activity_empty_margin"
+		        android:divider="@color/theme_background_color"
+		        android:scrollbarStyle="outsideInset"
+		        android:drawSelectorOnTop="true"
+		        android:scrollbars="none" />
+	<include 
+		   	android:id="@+id/progbar_loading" 
+		   	layout="@layout/loading"
+		   	android:visibility="gone" />
+	</RelativeLayout>
+    
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_background_color" >
+
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_empty_margin"
+        android:layout_marginLeft="@dimen/activity_empty_margin"
+        android:layout_marginRight="@dimen/activity_empty_margin" >
+    	<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_background_color" >
+            <LinearLayout  
+     		    android:layout_width="match_parent"
+       			android:layout_height="wrap_content"
+       			android:orientation="vertical" >
+     		<LinearLayout  
+     		    android:layout_width="match_parent"
+       			android:layout_height="wrap_content"
+       			android:background="@color/white"
+       			android:padding="@dimen/theme_padding"
+       			android:orientation="vertical" >
+			    <TextView
+			        android:id="@+id/title"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/textsize_bigger" />
+		    
+		    	<TextView
+		    	    android:id="@+id/detail"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="@dimen/activity_empty_margin" />
+		
+			    <com.cheng.pkeeper.util.NineGridView
+	                    android:id="@+id/addview_content"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content" />
+			</LinearLayout>
+			<RelativeLayout  
+	     		    android:layout_width="match_parent"
+	       			android:layout_height="wrap_content"
+	       			android:layout_marginTop="@dimen/activity_empty_margin" >
+	     		<ImageView
+				        android:id="@+id/re_name"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:src="@drawable/report_head"
+				        android:layout_marginTop="@dimen/activity_top_margin" />
+	     		<RelativeLayout  
+	     		    android:layout_width="match_parent"
+	       			android:layout_height="wrap_content"
+	       			android:layout_toRightOf="@+id/re_name"
+	       			android:background="@color/white"
+	       			android:padding="@dimen/theme_padding"
+	       			android:layout_marginLeft="@dimen/activity_empty_margin"
+	       			android:layout_marginTop="@dimen/activity_empty_margin" >
+				    <TextView
+				        android:id="@+id/re_title"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_toLeftOf="@+id/re_time"
+				        android:textSize="@dimen/textsize_bigger" />
+			    
+				    <TextView
+				        android:id="@+id/re_time"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				         />
+			    	<TextView
+			    	    android:id="@+id/re_detail"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_below="@+id/re_title"
+			            android:layout_marginTop="@dimen/activity_empty_margin" />
+				</RelativeLayout>
+			</RelativeLayout>
+			</LinearLayout>
+		</ScrollView>
+		
+    	
+	</RelativeLayout>
+	
+</LinearLayout>

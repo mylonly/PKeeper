@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1147DEF-8D4E-4323-A198-C1C33505DD61</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PKeeper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c71868d5-da94-48e0-8c58-c8d90a7df4e4</key>
+		<string>svn://www.mylonly.com/repositories</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PKeeper/IOS/PKeeper/PKeeper.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c71868d5-da94-48e0-8c58-c8d90a7df4e4</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c71868d5-da94-48e0-8c58-c8d90a7df4e4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c71868d5-da94-48e0-8c58-c8d90a7df4e4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>repositories</string>
+		</dict>
+	</array>
+</dict>
+</plist>

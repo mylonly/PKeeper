@@ -1,0 +1,37 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:actionBarStyle">@style/BaseActionBar</item>
+        <item name="android:windowBackground">@color/text_color_primary</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="BaseTheme.NoActionBar" parent="AppBaseTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/theme_color_green</item>
+    </style>
+    
+    <style name="main_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/theme_background_color</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/theme_padding</item>
+    </style>
+    
+</resources>

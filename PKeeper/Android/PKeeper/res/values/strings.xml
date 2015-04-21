@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">养禽管家</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="logout">注销</string>
+    
+    <string name="global_pkeeper">养禽管家</string>
+    <string name="global_keepinfo">养殖记录</string>
+    <string name="global_keepinfo_reminder">（今天养殖记录未提交）</string>
+    <string name="global_userinfo_reminder">（个人信息还未完善）</string>
+    <string name="global_houseinfo_reminder">（鸡场信息还未完善）</string>
+    <string name="global_reportinfo_reminder">（收到新的报告反馈）</string>
+    <string name="global_businessinfo_reminder">（有新的内容更新）</string>
+    <string name="global_reportinfo">疾病报告</string>
+    <string name="global_userinfo">用户信息</string>
+    <string name="global_houseinfo">鸡场信息</string>
+    <string name="global_businessinfo">最新行业知识</string>
+    <string name="global_pkeeper1">text7</string>
+    <string name="global_pkeeper2">text8</string>
+    
+    <string name="text9">text9</string>
+    
+    <string name="login">登录</string>
+    <string name="loginning">正在登录…</string>
+    <string name="cancel">取消</string>
+    <string name="username">用户名:</string>
+    <string name="password">密码:</string>
+    <string name="confirm_pwd">确认密码</string>
+    <string name="confirm">确认</string>
+    <string name="register">注册</string>
+    <string name="user_register">用户注册</string>
+    <string name="user_login">用户登录</string>
+    <string name="user_null">请输入用户名</string>
+	<string name="pwd_null">请输入密码</string>
+    <string name="pwd_dif">请重新确认密码</string>
+    <string name="request_fail">网络请求失败</string>
+    
+    <string name="rm_password">记住密码</string>
+    <string name="auto_login">自动登录</string>
+	<string name="login_fail">用户名或密码错误，请重新登录</string>
+	<string name="login_success">登录成功</string>
+	
+	<string name="userinfo">用户基本信息</string>
+	<string name="userinfo0">姓名</string>
+	<string name="userinfo1">性别</string>
+	<string name="userinfo2">年龄</string>
+	<string name="userinfo3">手机号码</string>
+	<string name="userinfo4">QQ</string>
+	<string name="userinfo5">email</string>
+	<string name="userinfo6">省/市</string>
+	<string name="userinfo7">详细地址</string>
+	<string name="userinfo8">从业年限</string>
+	<string name="info_edit">编辑资料</string>
+	<string name="info_save">保存</string>
+	
+	<string name="keep_info">养殖记录</string>
+	<string name="keep_info_add">添加记录</string>
+	<string name="keepinfo_current">当前阶段</string>
+	<string name="keepinfo_first">什么是</string>
+	<string name="keepinfo_last">阶段</string>
+	<string name="day_num">第%d天</string>
+	<string name="action_compose">提交</string>
+	<string name="keepdetail_today">今天应该做这些</string>
+	<string name="keepdetail_job">今天工作内容</string>
+	<string name="keepdetail_today_status">今日情况汇总</string>
+	<string name="keepdetail_status">今日鸡场状况</string>
+	<string name="keepinfo_a">进鸡前准备</string>
+	<string name="keepinfo_b">前期养殖</string>
+	<string name="keepinfo_c">中后期养殖</string>
+	<string name="keepinfo_add_a">疫苗免疫</string>
+	<string name="keepinfo_add_b">保健</string>
+	<string name="keepinfo_add_c">消毒</string>
+	<string name="keepinfo_add_d">驱虫</string>
+	<string name="keepinfo_type1">食物消耗</string>
+	<string name="keepinfo_type2">饮水量</string>
+	<string name="keepinfo_type3">平均体重</string>
+	<string name="keepinfo_type4">死亡个数</string>
+	<string name="keepinfo_type5">淘汰个数</string>
+	<string name="keepinfo_type6">温度</string>
+	<string name="keepinfo_type7">湿度</string>
+	<string name="keepinfo_type8">光照</string>
+	<string name="keepinfo_type9">疫苗名称</string>
+	<string name="keepinfo_type10">兽药名称</string>
+	<string name="keepinfo_type11">驱虫与消毒情况</string>
+	
+	<string name="reportinfo">疾病报告</string>
+	<string name="add">添加</string>
+	<string name="submit">提交</string>
+	<string name="reportinfo_title">症状标题</string>
+	<string name="reportinfo_detail">症状描述</string>
+	<string name="add_image">添加图片</string>
+	<string name="delete_image">确定删除该图片？</string>
+	
+	<string name="house_info">鸡场信息</string>
+    <string name="cfactory_name">鸡场名称</string>
+    <string name="cfactory_address">详细地址</string>
+    <string name="cfactory_scale">鸡场规模</string>
+    <string name="cbuild_time">建厂时间</string>
+    <string name="cfactory_type">鸡场类型</string>
+    <string name="cfactory_mode">养殖方式</string>
+    <string name="croom_type">鸡舍类型</string>
+    <string name="cwater_supply">供水方式</string>
+    <string name="cfood_supply">供料方式</string>
+    <string name="clear_excrement">淸粪方式</string>
+    <string name="cgroup_style">集群组成</string>
+    <string name="cpic_fold">鸡场布局照片</string>
+    
+    <string name="business_info">最新行业知识</string>
+    <string name="businessinfo1">参考资料</string>
+    <string name="businessinfo2">技术指导</string>
+    <string name="businessinfo3">培训课程</string>
+    <string name="businessinfo4">行业信息</string>
+	
+</resources>

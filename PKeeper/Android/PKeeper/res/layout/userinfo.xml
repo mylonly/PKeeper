@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- <com.example.mytest.util.SquareLayout
+                    android:id="@+id/main_teacher_head_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_circle"
+                    android:padding="5dp" >
+
+                    <com.example.mytest.util.CircleImage
+                        android:id="@+id/main_teacher_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/user_03" />
+                </com.example.mytest.util.SquareLayout> -->
+	<com.cheng.pkeeper.util.CircleImage
+        android:id="@+id/iv_edit"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user_03" />
+    <!-- <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/user_03" /> -->
+
+    <ListView
+        android:id="@+id/list_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/iv_edit"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:divider="#aaaaaa"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="none" />
+
+</RelativeLayout>

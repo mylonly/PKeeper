@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- <array name="music_library_image">
+        <item>@drawable/library_all</item>
+        <item>@drawable/library_favori</item>
+        <item>@drawable/library_folder</item>
+        <item>@drawable/library_aritist</item>
+        <item>@drawable/library_album</item>
+        <item>@drawable/library_genre</item>
+        <item>@drawable/library_recent_add_big</item>
+        <item>@drawable/library_playlist</item>
+        <item>@drawable/library_download</item>
+        <item>@drawable/library_scan</item>
+    </array>-->
+    <array name="userinfo_library_drawable">
+        <item>@drawable/user_06</item>
+        <item>@drawable/user_09</item>
+        <item>@drawable/user_11</item>
+        <item>@drawable/user_13</item>
+        <item>@drawable/user_15</item>
+        <item>@drawable/user_17</item>
+        <item>@drawable/user_19</item>
+        <item>@drawable/user_21</item>
+        <item>@drawable/user_22</item>
+    </array> 
+    <array name="userinfo_library_name">
+        <item>@string/userinfo0</item>
+        <item>@string/userinfo1</item>
+        <item>@string/userinfo2</item>
+        <item>@string/userinfo3</item>
+        <item>@string/userinfo4</item>
+        <item>@string/userinfo5</item>
+        <item>@string/userinfo6</item>
+        <item>@string/userinfo7</item>
+        <item>@string/userinfo8</item>
+    </array> 
+    <array name="houseinfo_library_string">
+        <item>@string/cfactory_name</item>
+        <item>@string/cfactory_address</item>
+        <item>@string/cfactory_scale</item>
+        <item>@string/cbuild_time</item>
+        <item>@string/cfactory_type</item>
+        <item>@string/cfactory_mode</item>
+        <item>@string/croom_type</item>
+        <item>@string/cwater_supply</item>
+        <item>@string/cfood_supply</item>
+        <item>@string/clear_excrement</item>
+        <item>@string/cgroup_style</item>
+        <item>@string/cpic_fold</item>
+    </array>
+    <string-array name="keepinfo_status1">
+		<item>@string/keepinfo_a</item>
+	</string-array>
+	<string-array name="keepinfo_status2">
+		<item>@string/keepinfo_a</item>
+		<item>@string/keepinfo_b</item>
+	</string-array>
+    <string-array name="keepinfo_status3">
+		<item>@string/keepinfo_a</item>
+		<item>@string/keepinfo_b</item>
+		<item>@string/keepinfo_c</item>
+	</string-array>
+		
+	<string-array name="factoryscale_items">
+	    <item>请选择</item>
+		<item>小于10万只</item>
+		<item>小于50万只</item>
+		<item>小于100万只</item>
+		<item>小于200万只</item>
+		<item>大于200万只</item>
+	</string-array>
+	<string-array name="factorytype_items">
+	    <item>请选择</item>
+		<item>商品肉鸡(快大型)</item>
+		<item>黄羽肉鸡</item>
+		<item>青脚麻鸡</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="factorymode_items">
+	    <item>请选择</item>
+		<item>地面平养</item>
+		<item>网上平养</item>
+		<item>笼养</item>
+		<item>散养</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="roomtype_items">
+	    <item>请选择</item>
+		<item>砖混简易</item>
+		<item>封闭钢架</item>
+		<item>大棚</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="watersupply_items">
+	    <item>请选择</item>
+		<item>全自动:水线加水壶</item>
+		<item>全自动:水线加乳头</item>
+		<item>人工辅助</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="foodsupply_items">
+	    <item>请选择</item>
+		<item>全自动供料</item>
+		<item>人工供料</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="clearexcrement_items">
+	    <item>请选择</item>
+		<item>自动清粪</item>
+		<item>出栏后清粪</item>
+		<item>其他</item>
+	</string-array>
+	<string-array name="cgroupstyle_items">
+	    <item>请选择</item>
+		<item>单一日龄</item>
+		<item>多日龄混养</item>
+	</string-array>
+	
+</resources>

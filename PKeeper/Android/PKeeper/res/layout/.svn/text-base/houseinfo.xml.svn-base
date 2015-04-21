@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <ListView
+            android:id="@+id/house_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleview"
+	        android:layout_marginRight="@dimen/activity_empty_margin"
+	        android:layout_marginLeft="@dimen/activity_empty_margin"
+	        android:scrollbarStyle="outsideInset"
+	        android:drawSelectorOnTop="true"
+	        android:scrollbars="none"
+	        android:divider="#aaaaaa"
+        	android:dividerHeight="1dp" >
+     </ListView>
+	
+    
+
+</RelativeLayout>

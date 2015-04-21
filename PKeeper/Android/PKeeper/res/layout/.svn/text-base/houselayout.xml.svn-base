@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:layout_below="@+id/titleview"
+			android:layout_marginTop="@dimen/activity_empty_margin" >
+    			<LinearLayout
+    			     android:id="@+id/ll"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        
+			        android:orientation="horizontal"
+			        android:background="@color/white"
+			        android:padding="@dimen/theme_padding" >
+			
+			        <ImageView
+			            android:id="@+id/iv_repoinfo_add"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:padding="5dp"
+			            android:src="@drawable/add_image" />
+			
+			        <TextView
+			            android:id="@+id/textView1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_marginLeft="@dimen/activity_empty_margin"
+			            android:layout_gravity="center_vertical"
+			            android:text="@string/add_image" />
+			    </LinearLayout>
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+	                android:padding="@dimen/theme_padding"
+	                android:layout_below="@+id/ll" >
+			    	<com.cheng.pkeeper.util.NineGridView
+	                    android:id="@+id/addview_content"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content" />
+			    </LinearLayout>
+			    <include 
+				   	android:id="@+id/progbar_loading" 
+				   	layout="@layout/loading"
+				   	android:visibility="gone" />
+		</LinearLayout>
+</RelativeLayout>

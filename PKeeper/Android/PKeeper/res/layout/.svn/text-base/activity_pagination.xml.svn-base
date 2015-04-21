@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="ListView底部分页刷新" 
+    android:gravity="center"
+    android:textSize="18sp"
+    android:textColor="#FF0000"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"/>
+  
+  <com.example.mytest.test.PaginationListView 
+    android:id="@+id/pagination_lv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />
+  
+</LinearLayout>

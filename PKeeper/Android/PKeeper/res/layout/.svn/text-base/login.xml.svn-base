@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_background_color" >
+    
+    <LinearLayout
+        android:id="@+id/login_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_centerVertical="true" >
+		    
+		<RelativeLayout
+		    android:id="@+id/info_layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="36dp" >
+		
+		    <!--
+		             <ImageButton 
+		            android:id="@+id/img_btn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:background="@drawable/quit"/>
+		    -->
+		
+		    <TextView
+		        android:id="@+id/tv_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:text="@string/app_name"
+		        android:textSize="30sp"
+		        android:textColor="@color/theme_color_green" />
+		    
+		    <TextView
+		        android:id="@+id/tv_login"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tv_title"
+		        android:layout_marginTop="@dimen/activity_top_margin"
+		        android:layout_centerHorizontal="true"
+		        android:text="@string/user_login"
+		        android:textSize="18sp"
+		        android:textColor="@color/theme_color_green" />
+		
+		    <AutoCompleteTextView
+		        android:id="@+id/et_user"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/tv_login"
+		        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+		        android:layout_marginRight="@dimen/activity_horizontal_margin"
+		        android:layout_marginTop="@dimen/activity_empty_margin"
+		        android:scrollHorizontally="true"
+		        android:singleLine="true"
+		        android:hint="@string/username" />
+		
+		    <EditText
+		        android:id="@+id/et_pwd"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/et_user"
+		        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+		        android:layout_marginRight="@dimen/activity_horizontal_margin"
+		        android:layout_marginTop="@dimen/activity_empty_margin"
+		        android:scrollHorizontally="true"
+		        android:hint="@string/password"
+		        android:singleLine="true" />
+		
+		    <EditText
+		        android:id="@+id/et_confirm"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/et_pwd"
+		        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+		        android:layout_marginRight="@dimen/activity_horizontal_margin"
+		        android:layout_marginTop="@dimen/activity_empty_margin"
+		        android:scrollHorizontally="true"
+		        android:visibility="gone"
+		        android:hint="@string/confirm_pwd"
+		        android:singleLine="true" />
+		
+		    <CheckBox
+		        android:id="@+id/cb_mima"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/et_confirm"
+		        android:layout_marginLeft="12dp"
+		        android:textColor="@color/theme_color_green"
+		        android:text="@string/rm_password" />
+	
+		    <CheckBox
+		        android:id="@+id/cb_auto"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/cb_mima"
+		        android:layout_marginLeft="12dp"
+		        android:textColor="@color/theme_color_green"
+		        android:text="@string/auto_login" />
+		    <Button
+		        android:id="@+id/btn_login"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/et_pwd"
+		        android:layout_below="@+id/cb_auto"
+		        android:layout_toLeftOf="@+id/tv_login"
+		        android:layout_marginTop="@dimen/activity_empty_margin"
+		        android:text="@string/login"
+		        android:textSize="18sp"
+		        android:gravity="center"
+		        android:textColor="#ffffff"
+		        android:background="@drawable/buttonstyle1" />
+		    
+		    <Button
+		        android:id="@+id/btn_register"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignRight="@+id/et_pwd"
+		        android:layout_below="@+id/et_confirm"
+		        android:layout_toRightOf="@+id/tv_login"
+		        android:layout_alignTop="@+id/btn_login"
+		        android:text="@string/register"
+		        android:textSize="18sp"
+		        android:gravity="center"
+		        android:textColor="@color/theme_color_green"
+		        android:background="@drawable/buttonstyle" />
+		    </RelativeLayout>
+	</LinearLayout>
+
+	<include 
+	   	android:id="@+id/progbar_loading" 
+	   	layout="@layout/loading"
+	   	android:visibility="gone" />
+
+</RelativeLayout>

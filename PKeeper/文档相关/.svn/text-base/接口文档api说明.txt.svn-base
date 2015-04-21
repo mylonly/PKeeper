@@ -1,0 +1,55 @@
+1.登陆（url：http://ip:port/chkplatform/front/logindao.do）//应用没公用部署，ip，port都没确定，到时候测试时给你部署一下
+表单参数名称：userName,passWord
+
+返回的json：result:布尔类型   说明：如果为false表示用户名不存在，或者密码不正确
+            info: 字符串      说明：错误说明（用户名不存在，或者密码不正确）
+            flag:布尔类型     说明：false表示没有添加鸡场信息，true表示鸡场信息存在
+
+
+2.注册（url：http://ip:port/chkplatform/page/system/register.do）
+
+表单参数名称：userName,password,(重复密码参数可传可不传，ui端验证是否一致)
+
+ 返回json：result:布尔类型   说明：如果为false注册失败，或者用户名存在（下面info信息里面说明）
+            info: 字符串      说明：错误说明（用户名存在，或者注册失败）
+
+3.完善个人信息（或叫修改个人信息）（url：http://ip:port/chkplatform/page/system/perfectUser.do）
+表单参数名称：realName：字符串  说明：真实姓名
+              age：整形         说明：年龄
+              gender:字符串     说明：性别
+              email:字符串        说明：邮箱
+              mobile:字符串        说明：手机
+              tel:字符串          说明：固话
+              qq:字符串           说明：qq
+               assress:字符串      说明：地址
+               picAddress：（file的表单类型）说明：个人图像上传
+  返回json：result:布尔类型   说明：如果为false修改失败，true表示修改成功
+            info: 字符串      说明：错误说明（上传的图片格式不正确，或者是修改成功）
+  备注：个人信息的用户名是唯一，且不给修改的，密码这里不给修改，有单独的个人密码修改接口。
+
+
+4添加鸡场信息（url:http://localhost:8088/chkplatform/chickenfactroycontroller/save.do）
+
+ 表单参数名称：cfactoryName:字符串类型   说明:鸡场名称
+               cfactoryAddress:字符串类型   说明:鸡场地址
+               cfactoryScale:整形           说明：鸡场规模（UI端应该是一个对应关系，数字对应某一个范围的规模）
+               cbuildTime:字符串          说明：鸡场创建时间
+               cfactoryType:整形          说明：鸡场类型  （UI端应该是一个对应关系，数字对应某一个范围的规模）
+               cfactoryMode:整形          说明：养殖方式  （UI端应该是一个对应关系，数字对应某一个范围的规模）
+               croomType:整形          说明：鸡舍类型  （UI端应该是一个对应关系，数字对应某一个范围的规模）
+              cwaterSupply:整形          说明：供水方式  （UI端应该是一个对应关系，数字对应某一个范围的规模）
+              cfoodSupply:整形          说明：供食方式 （UI端应该是一个对应关系，数字对应某一个范围的规模）
+              clearExcrement:整形          说明：清粪方式  （UI端应该是一个对应关系，数字对应某一个范围的规模）
+              cgroupStyle:字符串          说明：鸡群组成  
+               cpicFolder：（file的表单类型） 说明：鸡场布局图片，可以上传多张（多张时input元素的name值都为cpicFolder）
+  返回json：result:布尔类型   说明：如果为false添加失败，true表示添加鸡场信息成功
+            info: 字符串      说明：错误说明（上传的图片格式不正确，或者是添加鸡场信息成功）
+
+5完善鸡场信息或叫修改鸡场信息（这一块不知道你UI端是怎么修改，是整个一块修改，还是切分多块来局部多次进行修改）
+
+6.验证个人信息完善度与验证鸡场信息完善度这一块可要可不要。（它们都包括必要信息，与不必要信息，如果只验证必要信息，然后根据必要信息来提示完善度或者是根据它们的所有信息来提示完善度）这两个接口随时可以开。给我具体回复
+
+
+
+
+

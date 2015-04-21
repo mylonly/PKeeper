@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/theme_padding"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/iv_repoinfo"
+        android:layout_width="@dimen/loadpic_wh"
+        android:layout_height="@dimen/loadpic_wh"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />    
+    <TextView
+        android:id="@+id/repoinfo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/iv_repoinfo"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="#000000"
+	    android:textSize="18sp"
+		android:text="dsfaddsfffffffffffffffffffffffff21122222222222222222222222222222222fffffffffffffffffffffaaaa"/>
+    <ImageView
+        android:id="@+id/iv_repoinfo_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repoinfo_content"
+        android:layout_alignParentLeft="true" /> 
+    
+</RelativeLayout>

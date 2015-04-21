@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_background_color" >
+
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    	<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_background_color" >
+     		<LinearLayout style="@style/main_layout" >
+			    <EditText
+			        android:id="@+id/edittext_title"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/reportinfo_title"
+			        android:background="@color/white" />
+		    
+		    	<EditText
+		    	    android:id="@+id/edittext_detail"
+		            android:layout_width="match_parent"
+		            android:layout_height="250dp"
+		            android:background="@color/white"
+		            android:hint="@string/reportinfo_detail"
+		            android:layout_marginTop="@dimen/activity_empty_margin" />
+		
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/activity_empty_margin"
+			        android:orientation="horizontal"
+			        android:background="@color/white" >
+			
+			        <ImageView
+			            android:id="@+id/iv_repoinfo_add"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:padding="5dp"
+			            android:src="@drawable/add_image" />
+			
+			        <TextView
+			            android:id="@+id/textView1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_marginLeft="@dimen/activity_empty_margin"
+			            android:layout_gravity="center_vertical"
+			            android:text="@string/add_image" />
+			    </LinearLayout>
+			    
+			    <com.cheng.pkeeper.util.NineGridView
+	                    android:id="@+id/addview_content"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content" />
+			</LinearLayout>
+		</ScrollView>
+		
+    	<include 
+		   	android:id="@+id/progbar_loading" 
+		   	layout="@layout/loading"
+		   	android:visibility="gone" />
+    	
+    	
+	</RelativeLayout>
+	
+</LinearLayout>

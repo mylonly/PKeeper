@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cheng.pkeeper.util.TitleView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/titleview" >
+	    <LinearLayout
+	        android:id="@+id/ll1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/activity_empty_margin"
+	        android:layout_marginRight="@dimen/activity_empty_margin"
+	        android:layout_marginTop="@dimen/activity_empty_margin"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	            android:id="@+id/current"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:layout_gravity="center_vertical"
+	            android:gravity="center"
+	            android:text="@string/keepinfo_current"
+	            android:textSize="15sp"
+	            android:textColor="#000000"
+	            android:background="@drawable/keepinfo_type" />
+	
+	        <Spinner
+	            android:id="@+id/spinner_current"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="3"
+	            android:gravity="center"
+	            android:background="@drawable/keepinfo_content"
+	            android:padding="@dimen/theme_padding" />
+	
+	    </LinearLayout>
+	    <LinearLayout
+	        android:id="@+id/ll2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ll1"
+	        android:layout_marginTop="@dimen/activity_empty_margin"
+	        android:orientation="horizontal"
+	        android:gravity="center_horizontal" >
+			<ImageView
+		        android:id="@+id/imageView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:src="@drawable/keepinfo_03" />
+		    <TextView
+		        android:id="@+id/tv_qa"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:textColor="@color/text_color_secondary"
+		        android:textSize="12sp" />
+		</LinearLayout>
+	    <com.cheng.pkeeper.util.PullToRefreshListView
+	        android:id="@+id/listkeep_info"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ll2"
+	        android:layout_above="@+id/btn_add"
+	        android:layout_marginLeft="@dimen/activity_empty_margin"
+	        android:layout_marginRight="@dimen/activity_empty_margin"
+	        android:layout_marginTop="@dimen/activity_top_margin"
+	        android:dividerHeight="@dimen/activity_empty_margin"
+	        android:divider="@color/white"
+	        android:drawSelectorOnTop="true"
+	        android:scrollbarStyle="outsideInset"
+	        android:scrollbars="none" >
+	    </com.cheng.pkeeper.util.PullToRefreshListView>
+	    <Button
+	        android:id="@+id/btn_add"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"    
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginLeft="@dimen/activity_empty_margin"
+	        android:layout_marginRight="@dimen/activity_empty_margin"
+	        android:layout_marginBottom="@dimen/activity_empty_margin"
+	        android:background="@color/theme_background_color"
+	        android:padding="@dimen/theme_padding"
+	        android:gravity="center"
+	        android:visibility="gone"
+	        android:text="@string/keep_info_add" >
+	    </Button>
+	
+	    <include 
+		   	android:id="@+id/progbar_loading" 
+		   	layout="@layout/loading"
+		   	android:visibility="gone" />
+	</RelativeLayout>
+</RelativeLayout>
