@@ -23,6 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIButton* closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(260, 20, 60, 44)];
+    [closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [closeBtn addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
+    [self.container addSubview:closeBtn];
+    
     UILabel* appName = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, SCREENWIDTH, 40)];
     appName.text = @"养禽管家";
     appName.textAlignment = NSTextAlignmentCenter;
@@ -80,6 +85,13 @@
 - (BOOL)navigationBarHidden
 {
     return YES;
+}
+
+- (void)close:(UIButton*)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)requestDidFinished:(ASIHTTPRequest *)theRequest

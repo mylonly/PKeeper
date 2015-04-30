@@ -13,9 +13,12 @@
 
 #define UPYUNVIDEOPATH(savekey) [NSString stringWithFormat:@"http://pk-video.b0.upaiyun.com/%@",savekey]
 
-#define HOST @"http://121.40.150.229:8088/"
+#define HOST @"http://121.40.150.229:8080/"
 
-#define BATCHID @"batch_id"
+#define BATCHID [NSString stringWithFormat:@"batchId-%@",[PKUserModel shareInstance].userID]
+
+
+#define WEATHER(lat,lon) STRFORMAT(@"http://api.openweathermap.org/data/2.5/weather?lat=%lf&lon=%lf&units=imperial",lat,lon)
 
 //登陆
 #define LOGIN STRFORMAT(@"%@/chkplatform/front/logindao.do",HOST)

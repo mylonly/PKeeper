@@ -37,12 +37,46 @@
     self.enableRefreshHeader = YES;
     self.container.backgroundColor = [UIColor whiteColor];
     m_itemArray = [[NSMutableArray alloc] init];
+    [self checkCurrentStage];
+    [self getCurrentBatchInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self getCurrentBatchInfo];
+}
+
+- (void)checkCurrentStage
+{
+    NSString* chickenDay = [PKChickenHouseModel shareInstance].ChickenTime;
+    
+    NSDate* firstStartDay = [NSDate dateDaysAgo:15 fromDate:[NSDate dateFromString:chickenDay withFormat:@"yyyy-MM-dd"]];
+    NSTimeInterval first = [firstStartDay timeIntervalSince1970];
+    
+    NSDate* secondStartDay = [NSDate dateFromString:chickenDay withFormat:@"yyyy-MM-dd"];
+    NSTimeInterval second = [secondStartDay timeIntervalSince1970];
+    
+    NSDate* thirdStartDay = [NSDate dateDaysAfter:48 fromDate:[NSDate dateFromString:chickenDay withFormat:@"yyyy-MM-dd"]];
+    NSTimeInterval third = [thirdStartDay timeIntervalSince1970];
+    
+    NSTimeInterval current = [[NSDate date] timeIntervalSince1970];
+    
+    if (current < second)
+    {
+        m_currentStage = 1;
+        [m_currentStageBtn setTitle:@"进鸡准备" forState:UIControlStateNormal];
+    }
+    else if(current > second && current < third)
+    {
+        m_currentStage = 2;
+        [m_currentStageBtn setTitle:@"前期养殖" forState:UIControlStateNormal];
+    }
+    else
+    {
+        m_currentStage = 2;
+        [m_currentStageBtn setTitle:@"中后期养殖" forState:UIControlStateNormal];
+    }
+    
 }
 
 - (void)refreshTableViewDataSource
@@ -56,7 +90,8 @@
     m_batchInfo = [[NSUserDefaults standardUserDefaults] valueForKey:BATCHID];
     if (m_batchInfo)
     {
-        [self getCurrentStage];
+        [self getRecordList];
+        //[self getCurrentStage];
     }
     else
     {
@@ -123,7 +158,7 @@
     
     m_currentStageBtn = [[UIButton alloc] initWithFrame:CGRectMake(140, 10, 170, 45)];
     [m_currentStageBtn setBackgroundImage:[UIImage imageNamed:@"farmrecord_stageBtn"]];
-    [m_currentStageBtn setTitle:@"进鸡前准备" forState:UIControlStateNormal];
+    [m_currentStageBtn setTitle:@"进鸡准备" forState:UIControlStateNormal];
     [m_currentStageBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [m_currentStageBtn addTarget:self action:@selector(stageChangeAction:) forControlEvents:UIControlEventTouchUpInside];
     m_currentStageBtn.titleLabel.font = FONT(18);
@@ -135,7 +170,7 @@
 - (void)stageChangeAction:(UIButton*)sender
 {
     SinglePickerSheet* picksheet = [[SinglePickerSheet alloc] initWithTitle:@"选择阶段" delegate:self];
-    picksheet.itemArray = @[@"进鸡前准备",@"前期养殖",@"中后期养殖"];
+    picksheet.itemArray = @[@"进鸡准备",@"前期养殖",@"中后期养殖"];
     [picksheet showInView:self.view];
 }
 

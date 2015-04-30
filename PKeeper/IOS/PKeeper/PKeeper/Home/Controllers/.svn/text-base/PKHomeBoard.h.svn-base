@@ -7,7 +7,12 @@
 //
 
 #import "PKBaseBoard.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface PKHomeBoard : PKBaseBoard
+
+@property (nonatomic,strong) CLLocationManager* locationMgr;
+
 
 @end

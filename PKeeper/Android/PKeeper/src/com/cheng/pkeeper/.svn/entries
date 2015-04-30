@@ -1,7 +1,7 @@
 10
 
 dir
-105
+109
 svn://txg@www.mylonly.com/repositories/PKeeper/Android/PKeeper/src/com/cheng/pkeeper
 svn://txg@www.mylonly.com/repositories
 
@@ -25,6 +25,9 @@ txg
 
 
 c71868d5-da94-48e0-8c58-c8d90a7df4e4
+
+http
+dir
 
 AppBasicActivity.java
 file
@@ -60,8 +63,39 @@ txg
 
 1225
 
-http
-dir
+VideoPlayerActivity.java
+file
+
+
+
+
+2015-04-20T15:42:04.000000Z
+9699cc0416513817fe741bf7001a2444
+2015-04-09T02:16:27.594288Z
+98
+txg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2691
 
 KeepDetailInfoActivity.java
 file
@@ -96,40 +130,6 @@ txg
 
 
 27077
-
-VideoPlayerActivity.java
-file
-
-
-
-
-2015-04-20T15:42:04.000000Z
-9699cc0416513817fe741bf7001a2444
-2015-04-09T02:16:27.594288Z
-98
-txg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2691
 
 ReportInfoActivity.java
 file
@@ -199,40 +199,6 @@ txg
 
 1156
 
-UserInfoActivity.java
-file
-
-
-
-
-2015-04-20T15:42:04.000000Z
-1e395440ab4d03f0cf70597cec7ba7bf
-2015-04-09T02:16:27.594288Z
-98
-txg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-19191
-
 SplashActivity.java
 file
 
@@ -266,6 +232,40 @@ txg
 
 
 1426
+
+UserInfoActivity.java
+file
+
+
+
+
+2015-04-20T15:42:04.000000Z
+1e395440ab4d03f0cf70597cec7ba7bf
+2015-04-09T02:16:27.594288Z
+98
+txg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19191
 
 adapt
 dir
@@ -304,40 +304,6 @@ txg
 
 11465
 
-ReportInfoAddActivity.java
-file
-
-
-
-
-2015-04-20T15:42:04.000000Z
-5ef58627b930c8d4eb05639b29c7d2e9
-2015-04-09T02:16:27.594288Z
-98
-txg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8644
-
 KeepInfoActivity.java
 file
 
@@ -371,6 +337,40 @@ txg
 
 
 10617
+
+ReportInfoAddActivity.java
+file
+
+
+
+
+2015-04-20T15:42:04.000000Z
+5ef58627b930c8d4eb05639b29c7d2e9
+2015-04-09T02:16:27.594288Z
+98
+txg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8644
 
 PKeeperApplication.java
 file

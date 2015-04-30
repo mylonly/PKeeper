@@ -18,6 +18,9 @@ DEF_SINGLETON(PKChickenHouseModel)
     self = [super init];
     if (self)
     {
+        _houseAddress = @"";
+        _houseAddress = @"";
+        _houseCreatedTime = @"";
         _chickenTypeAry = @[@"商品肉鸡(快大型)",@"黄羽肉鸡",@"青脚麻鸡",@"其他"];
         _houseScaleTypeAry = @[@"小于10万只",@"小于50万只",@"小于100万只",@"小于200万只",@"大于200万只"];
         _farmTypeAry = @[@"地面平养",@"网上平养",@"笼养",@"散养",@"其他"];
@@ -42,7 +45,10 @@ DEF_SINGLETON(PKChickenHouseModel)
     _houseName = [[dict valueForKey:@"cfactoryName"] asNSString];
     _houseAddress = [[dict valueForKey:@"cfactoryAddress"] asNSString];
     _houseCreatedTime = [[dict valueForKey:@"cbuildTime"] asNSString];
-    
+    _ChickenTime = [[dict valueForKey:@"firstbatchtime"] asNSString];
+    if (!_ChickenTime) {
+        _ChickenTime = @"";
+    }
     self.houseScaleType = [[dict valueForKey:@"cfactoryScale"] integerValue];
     self.chickenHouseType = [[dict valueForKey:@"croomType"] integerValue];
     self.farmType = [[dict valueForKey:@"cfactoryMode"] integerValue];
@@ -51,7 +57,6 @@ DEF_SINGLETON(PKChickenHouseModel)
     self.clearShitType = [[dict valueForKey:@"clearExcrement"] integerValue];
     self.chickenAgeType = [[dict valueForKey:@"cgroupStyle"] integerValue];
     self.chickenType = [[dict valueForKey:@"cfactoryType"] integerValue];
-    
     NSString* imageUrl = [[dict valueForKey:@"picnames"] asNSString];
     [_imageUrlArray addObjectsFromArray:[imageUrl componentsSeparatedByString:@","]];
 }
@@ -71,6 +76,10 @@ DEF_SINGLETON(PKChickenHouseModel)
         return NO;
     }
     if (!_houseCreatedTime || [_houseCreatedTime isEqualToString:@""])
+    {
+        return NO;
+    }
+    if (!_ChickenTime || [_ChickenTime isEqualToString:@""])
     {
         return NO;
     }
@@ -124,6 +133,7 @@ DEF_SINGLETON(PKChickenHouseModel)
                                 @"cfactoryAddress":[PKChickenHouseModel shareInstance].houseAddress,
                                 @"cfactoryScale":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].houseScaleType],
                                 @"cbuildTime":[PKChickenHouseModel shareInstance].houseCreatedTime,
+                                @"firstbatchtime":[PKChickenHouseModel shareInstance].ChickenTime,
                                 @"croomType":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].chickenHouseType],
                                 @"cfactoryMode":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].farmType],
                                 @"cwaterSupply":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].supportWaterType],
@@ -142,6 +152,7 @@ DEF_SINGLETON(PKChickenHouseModel)
                                 @"cfactoryAddress":[PKChickenHouseModel shareInstance].houseAddress,
                                 @"cfactoryScale":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].houseScaleType],
                                 @"cbuildTime":[PKChickenHouseModel shareInstance].houseCreatedTime,
+                                @"firstbatchtime":[PKChickenHouseModel shareInstance].ChickenTime,
                                 @"croomType":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].chickenHouseType],
                                 @"cfactoryMode":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].farmType],
                                 @"cwaterSupply":[NSNumber numberWithInteger:[PKChickenHouseModel shareInstance].supportWaterType],

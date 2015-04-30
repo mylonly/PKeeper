@@ -85,6 +85,7 @@ typedef enum
 @property (nonatomic,strong) NSArray* houseScaleTypeAry;
 
 @property (nonatomic,strong) NSString* houseCreatedTime;
+@property (nonatomic,strong) NSString* ChickenTime; //进鸡时间
 
 //肉鸡类型
 @property (nonatomic,assign) CHICKENTYPE chickenType;

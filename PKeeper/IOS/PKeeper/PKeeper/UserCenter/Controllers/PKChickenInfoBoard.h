@@ -10,6 +10,8 @@
 
 @interface PKChickenInfoBoard : PKBaseBoard
 
+- (void)submit;
 
+- (void)reloadData;
 
 @end

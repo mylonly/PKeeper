@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		182F946E1AAC2649005AE7CF /* PKHomeBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 182F946D1AAC2649005AE7CF /* PKHomeBoard.m */; };
+		1865B8951AEB3672008B80AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1865B8941AEB3672008B80AB /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		1865B8A61AEB36E8008B80AB /* PKClouds.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B8981AEB36E8008B80AB /* PKClouds.m */; };
+		1865B8A71AEB36E8008B80AB /* PKCoord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B89A1AEB36E8008B80AB /* PKCoord.m */; };
+		1865B8A91AEB36E8008B80AB /* PKMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B89D1AEB36E8008B80AB /* PKMain.m */; };
+		1865B8AA1AEB36E8008B80AB /* PKNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B89F1AEB36E8008B80AB /* PKNSObject.m */; };
+		1865B8AB1AEB36E8008B80AB /* PKSys.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B8A11AEB36E8008B80AB /* PKSys.m */; };
+		1865B8AC1AEB36E8008B80AB /* PKWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B8A31AEB36E8008B80AB /* PKWeather.m */; };
+		1865B8AD1AEB36E8008B80AB /* PKWind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865B8A51AEB36E8008B80AB /* PKWind.m */; };
+		1865B8BC1AEB5178008B80AB /* 大雪@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8AE1AEB5178008B80AB /* 大雪@2x.png */; };
+		1865B8BD1AEB5178008B80AB /* 大雨@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8AF1AEB5178008B80AB /* 大雨@2x.png */; };
+		1865B8BE1AEB5178008B80AB /* 多云@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B01AEB5178008B80AB /* 多云@2x.png */; };
+		1865B8BF1AEB5178008B80AB /* 晴@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B11AEB5178008B80AB /* 晴@2x.png */; };
+		1865B8C01AEB5178008B80AB /* 闪电@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B21AEB5178008B80AB /* 闪电@2x.png */; };
+		1865B8C11AEB5178008B80AB /* 少云@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B31AEB5178008B80AB /* 少云@2x.png */; };
+		1865B8C21AEB5178008B80AB /* 雾@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B41AEB5178008B80AB /* 雾@2x.png */; };
+		1865B8C31AEB5178008B80AB /* 小雪@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B51AEB5178008B80AB /* 小雪@2x.png */; };
+		1865B8C41AEB5178008B80AB /* 小雨@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B61AEB5178008B80AB /* 小雨@2x.png */; };
+		1865B8C51AEB5178008B80AB /* 夜晚 晴@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B71AEB5178008B80AB /* 夜晚 晴@2x.png */; };
+		1865B8C61AEB5178008B80AB /* 夜晚多云@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B81AEB5178008B80AB /* 夜晚多云@2x.png */; };
+		1865B8C71AEB5178008B80AB /* 阴天@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8B91AEB5178008B80AB /* 阴天@2x.png */; };
+		1865B8C81AEB5178008B80AB /* 中雪@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8BA1AEB5178008B80AB /* 中雪@2x.png */; };
+		1865B8C91AEB5178008B80AB /* 中雨@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8BB1AEB5178008B80AB /* 中雨@2x.png */; };
+		1865B8CF1AEB5EDA008B80AB /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1865B8CE1AEB5EDA008B80AB /* close@2x.png */; };
 		187BA2771AA73E6E00C8B915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BA2761AA73E6E00C8B915 /* main.m */; };
 		187BA27A1AA73E6E00C8B915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BA2791AA73E6E00C8B915 /* AppDelegate.m */; };
 		187BA27D1AA73E6E00C8B915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BA27C1AA73E6E00C8B915 /* ViewController.m */; };
@@ -267,6 +290,37 @@
 		182F946C1AAC2649005AE7CF /* PKHomeBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHomeBoard.h; sourceTree = "<group>"; };
 		182F946D1AAC2649005AE7CF /* PKHomeBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKHomeBoard.m; sourceTree = "<group>"; };
 		1849EA041AA8A28D00338E2C /* PKInterfaceDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKInterfaceDefine.h; sourceTree = "<group>"; };
+		1865B8941AEB3672008B80AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1865B8961AEB36E8008B80AB /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		1865B8971AEB36E8008B80AB /* PKClouds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKClouds.h; sourceTree = "<group>"; };
+		1865B8981AEB36E8008B80AB /* PKClouds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKClouds.m; sourceTree = "<group>"; };
+		1865B8991AEB36E8008B80AB /* PKCoord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKCoord.h; sourceTree = "<group>"; };
+		1865B89A1AEB36E8008B80AB /* PKCoord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKCoord.m; sourceTree = "<group>"; };
+		1865B89C1AEB36E8008B80AB /* PKMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKMain.h; sourceTree = "<group>"; };
+		1865B89D1AEB36E8008B80AB /* PKMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKMain.m; sourceTree = "<group>"; };
+		1865B89E1AEB36E8008B80AB /* PKNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKNSObject.h; sourceTree = "<group>"; };
+		1865B89F1AEB36E8008B80AB /* PKNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKNSObject.m; sourceTree = "<group>"; };
+		1865B8A01AEB36E8008B80AB /* PKSys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKSys.h; sourceTree = "<group>"; };
+		1865B8A11AEB36E8008B80AB /* PKSys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKSys.m; sourceTree = "<group>"; };
+		1865B8A21AEB36E8008B80AB /* PKWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWeather.h; sourceTree = "<group>"; };
+		1865B8A31AEB36E8008B80AB /* PKWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWeather.m; sourceTree = "<group>"; };
+		1865B8A41AEB36E8008B80AB /* PKWind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWind.h; sourceTree = "<group>"; };
+		1865B8A51AEB36E8008B80AB /* PKWind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWind.m; sourceTree = "<group>"; };
+		1865B8AE1AEB5178008B80AB /* 大雪@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大雪@2x.png"; sourceTree = "<group>"; };
+		1865B8AF1AEB5178008B80AB /* 大雨@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大雨@2x.png"; sourceTree = "<group>"; };
+		1865B8B01AEB5178008B80AB /* 多云@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "多云@2x.png"; sourceTree = "<group>"; };
+		1865B8B11AEB5178008B80AB /* 晴@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "晴@2x.png"; sourceTree = "<group>"; };
+		1865B8B21AEB5178008B80AB /* 闪电@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪电@2x.png"; sourceTree = "<group>"; };
+		1865B8B31AEB5178008B80AB /* 少云@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "少云@2x.png"; sourceTree = "<group>"; };
+		1865B8B41AEB5178008B80AB /* 雾@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雾@2x.png"; sourceTree = "<group>"; };
+		1865B8B51AEB5178008B80AB /* 小雪@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小雪@2x.png"; sourceTree = "<group>"; };
+		1865B8B61AEB5178008B80AB /* 小雨@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小雨@2x.png"; sourceTree = "<group>"; };
+		1865B8B71AEB5178008B80AB /* 夜晚 晴@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夜晚 晴@2x.png"; sourceTree = "<group>"; };
+		1865B8B81AEB5178008B80AB /* 夜晚多云@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "夜晚多云@2x.png"; sourceTree = "<group>"; };
+		1865B8B91AEB5178008B80AB /* 阴天@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "阴天@2x.png"; sourceTree = "<group>"; };
+		1865B8BA1AEB5178008B80AB /* 中雪@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中雪@2x.png"; sourceTree = "<group>"; };
+		1865B8BB1AEB5178008B80AB /* 中雨@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中雨@2x.png"; sourceTree = "<group>"; };
+		1865B8CE1AEB5EDA008B80AB /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		187BA2711AA73E6E00C8B915 /* PKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187BA2751AA73E6E00C8B915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187BA2761AA73E6E00C8B915 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -684,6 +738,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1865B8951AEB3672008B80AB /* CoreLocation.framework in Frameworks */,
 				187BA3881AA74A6500C8B915 /* UIKit.framework in Frameworks */,
 				187BA3861AA749FA00C8B915 /* Foundation.framework in Frameworks */,
 				187BA3841AA7490700C8B915 /* ImageIO.framework in Frameworks */,
@@ -728,6 +783,21 @@
 		182F94691AAC262E005AE7CF /* Modles */ = {
 			isa = PBXGroup;
 			children = (
+				1865B8961AEB36E8008B80AB /* DataModels.h */,
+				1865B8971AEB36E8008B80AB /* PKClouds.h */,
+				1865B8981AEB36E8008B80AB /* PKClouds.m */,
+				1865B8991AEB36E8008B80AB /* PKCoord.h */,
+				1865B89A1AEB36E8008B80AB /* PKCoord.m */,
+				1865B89C1AEB36E8008B80AB /* PKMain.h */,
+				1865B89D1AEB36E8008B80AB /* PKMain.m */,
+				1865B89E1AEB36E8008B80AB /* PKNSObject.h */,
+				1865B89F1AEB36E8008B80AB /* PKNSObject.m */,
+				1865B8A01AEB36E8008B80AB /* PKSys.h */,
+				1865B8A11AEB36E8008B80AB /* PKSys.m */,
+				1865B8A21AEB36E8008B80AB /* PKWeather.h */,
+				1865B8A31AEB36E8008B80AB /* PKWeather.m */,
+				1865B8A41AEB36E8008B80AB /* PKWind.h */,
+				1865B8A51AEB36E8008B80AB /* PKWind.m */,
 			);
 			path = Modles;
 			sourceTree = "<group>";
@@ -735,6 +805,21 @@
 		182F946A1AAC262E005AE7CF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1865B8CE1AEB5EDA008B80AB /* close@2x.png */,
+				1865B8AE1AEB5178008B80AB /* 大雪@2x.png */,
+				1865B8AF1AEB5178008B80AB /* 大雨@2x.png */,
+				1865B8B01AEB5178008B80AB /* 多云@2x.png */,
+				1865B8B11AEB5178008B80AB /* 晴@2x.png */,
+				1865B8B21AEB5178008B80AB /* 闪电@2x.png */,
+				1865B8B31AEB5178008B80AB /* 少云@2x.png */,
+				1865B8B41AEB5178008B80AB /* 雾@2x.png */,
+				1865B8B51AEB5178008B80AB /* 小雪@2x.png */,
+				1865B8B61AEB5178008B80AB /* 小雨@2x.png */,
+				1865B8B71AEB5178008B80AB /* 夜晚 晴@2x.png */,
+				1865B8B81AEB5178008B80AB /* 夜晚多云@2x.png */,
+				1865B8B91AEB5178008B80AB /* 阴天@2x.png */,
+				1865B8BA1AEB5178008B80AB /* 中雪@2x.png */,
+				1865B8BB1AEB5178008B80AB /* 中雨@2x.png */,
 				CD3135711AE5292C003A5436 /* usercenter@2x.png */,
 				CDBEFDE71AC439D200323CC6 /* logout_down@2x.png */,
 				CDBEFDE81AC439D200323CC6 /* logout_up@2x.png */,
@@ -1103,6 +1188,7 @@
 		187BA3A41AA7533D00C8B915 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1865B8941AEB3672008B80AB /* CoreLocation.framework */,
 				187BA3791AA748DB00C8B915 /* libz.dylib */,
 				187BA3871AA74A6500C8B915 /* UIKit.framework */,
 				187BA3851AA749FA00C8B915 /* Foundation.framework */,
@@ -1768,7 +1854,9 @@
 			files = (
 				187BA3CA1AA753DE00C8B915 /* blueArrow@2x.png in Resources */,
 				187F1DFF1AADD53A0051D077 /* icon76.png in Resources */,
+				1865B8C81AEB5178008B80AB /* 中雪@2x.png in Resources */,
 				18C0F1A11AB580E700B33013 /* gender-icon@2x.png in Resources */,
+				1865B8C71AEB5178008B80AB /* 阴天@2x.png in Resources */,
 				18C0F1021AB3FC8C00B33013 /* 养殖记录_10.png in Resources */,
 				18C2338E1ABD8C0D00FD579B /* recordlist_right@2x.png in Resources */,
 				187F1E0B1AADD9E20051D077 /* home_userinfo@2x.png in Resources */,
@@ -1777,15 +1865,18 @@
 				18C0F0FE1AB3FC8C00B33013 /* 养殖记录_03.png in Resources */,
 				187F1E0A1AADD9E20051D077 /* home_farmrecord@2x.png in Resources */,
 				18C0F19E1AB580E700B33013 /* defaultAvatar@2x.png in Resources */,
+				1865B8C91AEB5178008B80AB /* 中雨@2x.png in Resources */,
 				187F1E041AADD5450051D077 /* Default~iphone.png in Resources */,
 				18BCF5B61AB31E42006E5562 /* 行情信息_off@2x.png in Resources */,
 				CDEBE09D1AB6C3B000F6C507 /* btn_back_normal@2x.png in Resources */,
 				18BCF5C81AB36889006E5562 /* nav_back_down@2x.png in Resources */,
 				187F1DFB1AADD53A0051D077 /* icon.png in Resources */,
 				187BA3CC1AA753DE00C8B915 /* grayArrow.png in Resources */,
+				1865B8BD1AEB5178008B80AB /* 大雨@2x.png in Resources */,
 				CDEBE1DD1ABC3BEC00F6C507 /* addPicFromCamera@2x.png in Resources */,
 				CDEBE09F1AB6C3B000F6C507 /* cancel@2x.png in Resources */,
 				CDEBE0A01AB6C3B000F6C507 /* cancel_disable@2x.png in Resources */,
+				1865B8C61AEB5178008B80AB /* 夜晚多云@2x.png in Resources */,
 				18BCF5C91AB36889006E5562 /* nav_back_up@2x.png in Resources */,
 				18C0F1011AB3FC8C00B33013 /* recordlist_cha@2x.png in Resources */,
 				187F1E0E1AADD9E20051D077 /* home_newsinfo@2x.png in Resources */,
@@ -1795,6 +1886,7 @@
 				18C2339E1ABEBF7D00FD579B /* addrecord_image@2x.png in Resources */,
 				CDEBE0A21AB6C3B000F6C507 /* choose@2x.png in Resources */,
 				187BA3CD1AA753DE00C8B915 /* grayArrow@2x.png in Resources */,
+				1865B8C51AEB5178008B80AB /* 夜晚 晴@2x.png in Resources */,
 				187F1E0C1AADD9E20051D077 /* home_sickreport@2x.png in Resources */,
 				18C0F1A01AB580E700B33013 /* email-icon@2x.png in Resources */,
 				CDEBE0A11AB6C3B000F6C507 /* cancel_press@2x.png in Resources */,
@@ -1806,12 +1898,15 @@
 				CDEBE0B01AB6E89F00F6C507 /* detail-address-icon@2x.png in Resources */,
 				18C0F19C1AB580E700B33013 /* address-icon@2x.png in Resources */,
 				18BCF5BA1AB31E42006E5562 /* playIcon@2x.png in Resources */,
+				1865B8C21AEB5178008B80AB /* 雾@2x.png in Resources */,
 				18C233991ABD9C0700FD579B /* addrecord_biankuang@2x.png in Resources */,
 				187BA3C81AA753DE00C8B915 /* blackArrow@2x.png in Resources */,
 				18C0F19F1AB580E700B33013 /* detail@2x.png in Resources */,
 				18C0F1A41AB580E700B33013 /* qq-icon@2x.png in Resources */,
 				CDEBE1DE1ABC3BEC00F6C507 /* addPicFromThumb@2x.png in Resources */,
+				1865B8C31AEB5178008B80AB /* 小雪@2x.png in Resources */,
 				187BA3D01AA753DE00C8B915 /* white_back@2x.png in Resources */,
+				1865B8CF1AEB5EDA008B80AB /* close@2x.png in Resources */,
 				187BA3C71AA753DE00C8B915 /* blackArrow.png in Resources */,
 				187F1DFC1AADD53A0051D077 /* icon@2x.png in Resources */,
 				187BA3D11AA753DE00C8B915 /* white_share@2x.png in Resources */,
@@ -1822,6 +1917,7 @@
 				18C0F1A21AB580E700B33013 /* mobile-icon@2x.png in Resources */,
 				CDFBB8601AC87712007741B1 /* default-zhuanjia@2x.png in Resources */,
 				18C0F1A31AB580E700B33013 /* name-icon@2x.png in Resources */,
+				1865B8BF1AEB5178008B80AB /* 晴@2x.png in Resources */,
 				187BA3CE1AA753DE00C8B915 /* redArrow.png in Resources */,
 				187F1E031AADD5450051D077 /* Default-568h.png in Resources */,
 				18BCF5B81AB31E42006E5562 /* 参考资料_off@2x.png in Resources */,
@@ -1829,14 +1925,19 @@
 				18BCF5B51AB31E42006E5562 /* 技术指导_on@2x.png in Resources */,
 				CDEBE1DA1ABC3A0100F6C507 /* icon_download@2x.png in Resources */,
 				187F1DFE1AADD53A0051D077 /* icon60@2x.png in Resources */,
+				1865B8C41AEB5178008B80AB /* 小雨@2x.png in Resources */,
 				18BCF5B91AB31E42006E5562 /* 培训课程_on@2x.png in Resources */,
+				1865B8C01AEB5178008B80AB /* 闪电@2x.png in Resources */,
 				187BA3D31AA753DE00C8B915 /* whiteArrow.png in Resources */,
 				18BCF5B41AB31E42006E5562 /* 参考资料_on@2x.png in Resources */,
+				1865B8BE1AEB5178008B80AB /* 多云@2x.png in Resources */,
 				CDEBE0A41AB6C3B000F6C507 /* choose_press@2x.png in Resources */,
 				18C0F0F31AB3FC7F00B33013 /* farmrecord_stage@2x.png in Resources */,
 				187F1E001AADD53A0051D077 /* icon76@2x.png in Resources */,
 				18C0F0FD1AB3FC8C00B33013 /* 养殖记录_03 3.png in Resources */,
+				1865B8C11AEB5178008B80AB /* 少云@2x.png in Resources */,
 				18C0F0FC1AB3FC8C00B33013 /* 养殖记录_03 2.png in Resources */,
+				1865B8BC1AEB5178008B80AB /* 大雪@2x.png in Resources */,
 				CDEBE1E71AC009A800F6C507 /* addPic@2x.png in Resources */,
 				18C0F19D1AB580E700B33013 /* age-icon@2x.png in Resources */,
 				187BA3CB1AA753DE00C8B915 /* gray_logo@2x.png in Resources */,
@@ -1909,6 +2010,7 @@
 				187BA3701AA7484C00C8B915 /* CJSONSerializer.m in Sources */,
 				18C233891ABD80B700FD579B /* PKRecordModel.m in Sources */,
 				187BA3931AA74CC500C8B915 /* Bee_SystemInfo.mm in Sources */,
+				1865B8AD1AEB36E8008B80AB /* PKWind.m in Sources */,
 				187BA33B1AA7484C00C8B915 /* ASIHTTPRequest.m in Sources */,
 				18C0F1751AB55A7900B33013 /* UpYun.m in Sources */,
 				CD31358C1AE55245003A5436 /* UIButton+PPiAwesome.m in Sources */,
@@ -1924,6 +2026,8 @@
 				CDEBE1ED1AC0103300F6C507 /* PKSickReportModel.m in Sources */,
 				187BA36B1AA7484C00C8B915 /* CJSONSerializedData.m in Sources */,
 				187BA3771AA7484C00C8B915 /* XHViewState.m in Sources */,
+				1865B8A91AEB36E8008B80AB /* PKMain.m in Sources */,
+				1865B8AA1AEB36E8008B80AB /* PKNSObject.m in Sources */,
 				187BA3361AA7484C00C8B915 /* ASIAuthenticationDialog.m in Sources */,
 				187BA3411AA7484C00C8B915 /* NSObject+Notification.m in Sources */,
 				187BA3631AA7484C00C8B915 /* UIImage+WebP.m in Sources */,
@@ -1931,6 +2035,7 @@
 				187BA33A1AA7484C00C8B915 /* ASIFormDataRequest.m in Sources */,
 				18C233941ABD99B900FD579B /* PKAddRecordBoard.m in Sources */,
 				187BA3751AA7484C00C8B915 /* XHFileAttribute.m in Sources */,
+				1865B8A71AEB36E8008B80AB /* PKCoord.m in Sources */,
 				18C0F16C1AB55A7900B33013 /* AFURLSessionManager.m in Sources */,
 				18C233971ABD9B2B00FD579B /* PKTodayStandardFlowCell.m in Sources */,
 				18BCF59E1AB3119E006E5562 /* PKCourseCell.m in Sources */,
@@ -1961,6 +2066,7 @@
 				18C0F16F1AB55A7900B33013 /* UIAlertView+AFNetworking.m in Sources */,
 				18C0F1761AB55A7900B33013 /* MF_Base64Additions.m in Sources */,
 				182F946E1AAC2649005AE7CF /* PKHomeBoard.m in Sources */,
+				1865B8AC1AEB36E8008B80AB /* PKWeather.m in Sources */,
 				CDEBE09C1AB6C3B000F6C507 /* DatePickerSheet.m in Sources */,
 				18C0F16A1AB55A7900B33013 /* AFURLRequestSerialization.m in Sources */,
 				187BA3711AA7484C00C8B915 /* NSString+XHMD5.m in Sources */,
@@ -1972,6 +2078,7 @@
 				187BA33F1AA7484C00C8B915 /* FKHUDHelper.m in Sources */,
 				18C0F1721AB55A7900B33013 /* UIProgressView+AFNetworking.m in Sources */,
 				187BA36E1AA7484C00C8B915 /* CJSONDeserializer.m in Sources */,
+				1865B8AB1AEB36E8008B80AB /* PKSys.m in Sources */,
 				187BA3661AA7484C00C8B915 /* UIView+WebCacheOperation.m in Sources */,
 				18C0F1971AB580E700B33013 /* PKChickenInfoBoard.m in Sources */,
 				187BA3721AA7484C00C8B915 /* UIImage+Utility.m in Sources */,
@@ -1997,6 +2104,7 @@
 				187BA3781AA7484C00C8B915 /* XHZoomingImageView.m in Sources */,
 				187BA3611AA7484C00C8B915 /* UIImage+GIF.m in Sources */,
 				187BA3501AA7484C00C8B915 /* QBAssetsCollectionVideoIndicatorView.m in Sources */,
+				1865B8A61AEB36E8008B80AB /* PKClouds.m in Sources */,
 				187BA3761AA7484C00C8B915 /* XHImageViewer.m in Sources */,
 				187BA3591AA7484C00C8B915 /* SDImageCache.m in Sources */,
 				18BCF59B1AB31191006E5562 /* PKGuiderCell.m in Sources */,
@@ -2140,14 +2248,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: tian xiang gen (3UX4Z8JDGG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tian xiang gen (3UX4Z8JDGG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tian xiang gen (CJEWB8K5UY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tian xiang gen (CJEWB8K5UY)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PKeeper/PKeeper.pch";
 				INFOPLIST_FILE = PKeeper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc3dddb2-6cb8-41c9-81c7-3060b247c1fa";
+				PROVISIONING_PROFILE = "dc0677ed-e755-42df-8d30-ff311583e54a";
 			};
 			name = Debug;
 		};
@@ -2155,14 +2263,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: tian xiang gen (3UX4Z8JDGG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tian xiang gen (3UX4Z8JDGG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tian xiang gen (CJEWB8K5UY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tian xiang gen (CJEWB8K5UY)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PKeeper/PKeeper.pch";
 				INFOPLIST_FILE = PKeeper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc3dddb2-6cb8-41c9-81c7-3060b247c1fa";
+				PROVISIONING_PROFILE = "dc0677ed-e755-42df-8d30-ff311583e54a";
 			};
 			name = Release;
 		};

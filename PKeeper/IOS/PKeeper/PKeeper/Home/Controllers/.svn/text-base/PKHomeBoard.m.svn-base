@@ -15,14 +15,24 @@
 #import "PKSickReportList.h"
 #import "PKLoginBoard.h"
 #import "PKUserCenterBoard.h"
+#import "DataModels.h"
 
-@interface PKHomeBoard ()<UIAlertViewDelegate>
+@interface PKHomeBoard ()<UIAlertViewDelegate,CLLocationManagerDelegate>
 {
     UILabel* m_farmRecordTips;
     UILabel* m_sickReportTips;
     UILabel* m_userInfoTips;
     UILabel* m_chickenInfoTips;
     UILabel* m_newsTips;
+    PKNSObject* m_weather;
+    
+    CLLocation* m_location;
+    
+    UIImageView* m_weatherIcon;
+    UILabel* m_weatherDesc;
+    UILabel* m_weatherDate;
+    UILabel* m_weatherTemp;
+    UILabel* m_weatheWind;
 }
 @end
 
@@ -34,6 +44,13 @@
     // Do any additional setup after loading the view.
     self.title = @"养禽管家";
     [self hideBack];
+    self.locationMgr = [[CLLocationManager alloc] init];
+    self.locationMgr.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationMgr.delegate = self;
+    if([_locationMgr respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [_locationMgr requestWhenInUseAuthorization];
+        [_locationMgr requestWhenInUseAuthorization]; //使用中授权
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,12 +61,76 @@
     {
         [self checkStatus];
     }
+    if ([CLLocationManager locationServicesEnabled]) {
+        
+        m_location = nil;
+        [_locationMgr startUpdatingLocation];
+
+    }
+    else
+    {
+        NSLog(@"开启定位失败");
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_locationMgr stopUpdatingLocation];
 }
 
 #pragma mark overload
 - (void)initContainer
 {
     [super initContainer];
+    
+    UIView* weatherView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, SCREENWIDTH-40, 120)];
+    weatherView.backgroundColor = RGB(245, 116, 90);
+    [self.container addSubview:weatherView];
+    
+    m_weatherIcon = [[UIImageView alloc] initWithFrame:CGRectMake(30, 20, 50, 50)];
+    [weatherView addSubview:m_weatherIcon];
+    
+    m_weatherDesc = [[UILabel alloc] initWithFrame:CGRectMake(30, 80, 50, 20)];
+    m_weatherDesc.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:18];
+    m_weatherDesc.textColor = [UIColor whiteColor];
+    m_weatherDesc.textAlignment = NSTextAlignmentCenter;
+    [weatherView addSubview:m_weatherDesc];
+    
+    m_weatherDate = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 160, 30)];
+    m_weatherDate.text = [NSDate stringFromDate:[NSDate date] withFormat:@"MM月dd日"];
+    m_weatherDate.textAlignment = NSTextAlignmentCenter;
+    m_weatherDate.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:20];
+    m_weatherDate.textColor = [UIColor whiteColor];
+    [weatherView addSubview:m_weatherDate];
+    
+    UILabel* weatherTempLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 40, 20)];
+    weatherTempLabel.textColor = [UIColor whiteColor];
+    weatherTempLabel.text = @"温度";
+    [weatherView addSubview:weatherTempLabel];
+    
+    m_weatherTemp = [[UILabel alloc] initWithFrame:CGRectMake(140, 50, 120, 20)];
+    m_weatherTemp.textColor = [UIColor whiteColor];
+    m_weatherTemp.textAlignment = NSTextAlignmentCenter;
+    m_weatherTemp.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:20];
+    [weatherView addSubview:m_weatherTemp];
+    
+    UILabel* weatherWindLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 80, 40, 20)];
+    weatherWindLabel.text = @"风速";
+    weatherWindLabel.textColor = [UIColor whiteColor];
+    [weatherView addSubview:weatherWindLabel];
+    
+    m_weatheWind = [[UILabel alloc] initWithFrame:CGRectMake(140, 80, 120, 20)];
+    m_weatheWind.textColor = [UIColor whiteColor];
+    m_weatheWind.textAlignment = NSTextAlignmentCenter;
+    m_weatheWind.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:20];
+    [weatherView addSubview:m_weatheWind];
+    
     
     //养殖记录
     UIView* farmRecordView = [[UIView alloc] initWithFrame:CGRectMake(20, 160, SCREENWIDTH-40, 100)];
@@ -181,6 +262,23 @@
     self.container.contentSize = CGSizeMake(self.container.width, newsBtn.y+newsBtn.height+30);
 }
 
+- (void)refreashWeatherView
+{
+    NSDictionary* weatherMap = [PKNSObject imageMap];
+    PKWeather* weather = [m_weather.weather firstObject];
+    NSString* weatherStr = [weatherMap valueForKey:weather.icon];
+    m_weatherIcon.image = [UIImage imageNamed:weatherStr];
+    m_weatherDesc.text = weatherStr;
+    
+    m_weatherTemp.text = [NSString stringWithFormat:@"%2.lf℃",[self hua2she:m_weather.main.temp]];
+    m_weatheWind.text = [NSString stringWithFormat:@"%2.lf级",m_weather.wind.speed];
+}
+
+- (double)hua2she:(double)hua
+{
+    return (hua-32)*5/9;
+}
+
 - (void)initNavBar
 {
     [super initNavBar];
@@ -189,11 +287,20 @@
     [userCenter setImage:[UIImage imageNamed:@"usercenter.png"] forState:UIControlStateNormal];
     [userCenter addTarget:self action:@selector(userCenterAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.nav addSubview:userCenter];
-//    UIButton* logoutBtn = [[UIButton alloc] initWithFrame:CGRectMake(260, Y_OFFSET, 60, 44)];
-//    [logoutBtn setImage:[UIImage imageNamed:@"logout_up"] forState:UIControlStateNormal];
-//    [logoutBtn setImage:[UIImage imageNamed:@"logout_down"] forState:UIControlStateHighlighted];
-//    [logoutBtn addTarget:self action:@selector(logoutAction:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.nav addSubview:logoutBtn];
+    UIButton* logoutBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, Y_OFFSET, 60, 44)];
+    [logoutBtn setImage:[UIImage imageNamed:@"logout_up"] forState:UIControlStateNormal];
+    [logoutBtn setImage:[UIImage imageNamed:@"logout_down"] forState:UIControlStateHighlighted];
+    [logoutBtn addTarget:self action:@selector(logoutAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.nav addSubview:logoutBtn];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    if(!m_location)
+    {
+        m_location = [locations firstObject];
+        [self getWeather];
+    }
 }
 
 #pragma mark local action
@@ -266,6 +373,12 @@
     m_chickenInfoTips.hidden = [[PKChickenHouseModel shareInstance] checkCompleted];
 }
 
+- (void)getWeather
+{
+    ASIHTTPRequest* request = [JSHttpHelper get:WEATHER(m_location.coordinate.latitude, m_location.coordinate.longitude) withValue:nil withDelegate:self withUserInfo:@"GetWeather"];
+    [self addRequest:request];
+}
+
 - (void)sickReportAction:(UIButton*)sender
 {
     if (![self checkUserLogin])
@@ -317,8 +430,10 @@
     BOOL success = [[response objectForKey:@"result"] boolValue];
     if (!success)
     {
-        [[FKHUDHelper shareInstance] presentMessageTips:message];
-        return;
+        if (![userInfo isEqualToString:@"GetWeather"])
+        {
+            [[FKHUDHelper shareInstance] presentMessageTips:message];
+        }
     }
     else
     {
@@ -333,6 +448,19 @@
             m_sickReportTips.hidden = !num;
         }
     }
+    
+    if ([userInfo isEqualToString:@"GetWeather"])
+    {
+        if (theRequest.responseStatusCode == 200)
+        {
+            m_weather = [[PKNSObject alloc] initWithDictionary:response];
+            [self refreashWeatherView];
+        }
+        else
+        {
+            [self getWeather];
+        }
+    }
 }
 
 
@@ -341,7 +469,11 @@
 {
     if (buttonIndex)
     {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [PKUserModel shareInstance].userID = nil;
+        PKLoginBoard* login = [[PKLoginBoard alloc] init];
+        [self presentViewController:login animated:YES completion:^{
+            
+        }];
     }
 }
 

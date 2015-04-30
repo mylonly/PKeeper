@@ -10,7 +10,7 @@
 #import "PKHomeBoard.h"
 #import "PKLoginBoard.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<CLLocationManagerDelegate>
 
 @end
 
@@ -24,6 +24,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    [self autoLogin];
     
     PKHomeBoard* home = [[PKHomeBoard alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:home];
@@ -31,6 +32,19 @@
     
     return YES;
 }
+
+- (void)autoLogin
+{
+    NSString* username = [[NSUserDefaults standardUserDefaults] valueForKey:USERNAME];
+    NSString* password = [[NSUserDefaults standardUserDefaults] valueForKey:PASSWORD];
+    if (username && password)
+    {
+        ASIHTTPRequest* request = [JSHttpHelper get:LOGIN withValue:@{@"username":username,@"password":password} withDelegate:self withUserInfo:@"autologin"];
+        [request startAsynchronous];
+    }
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,6 +66,35 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)navigationBarHidden
+{
+    return YES;
+}
+
+- (void)requestDidFinished:(ASIHTTPRequest *)theRequest
+{
+    [[FKHUDHelper shareInstance] dismissTips];
+    NSString* userInfo =  [theRequest.userInfo objectForKey:@"userInfo"];
+    NSDictionary* response = [[CJSONDeserializer deserializer]deserialize:theRequest.responseData error:nil];
+    NSString* message = [[response objectForKey:@"info"] asNSString];
+    BOOL success = [[response objectForKey:@"result"] boolValue];
+    if (!success)
+    {
+        [[FKHUDHelper shareInstance] presentMessageTips:message];
+        return;
+    }
+    else
+    {
+        if ([userInfo isEqualToString:@"autologin"])
+        {
+            NSDictionary* data = [response objectForKey:@"userdata"];
+            [[PKUserModel shareInstance] constructWithDict:data];
+            [[PKChickenHouseModel shareInstance] getchickenInfo];
+
+        }
+    }
 }
 
 @end

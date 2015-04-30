@@ -10,4 +10,8 @@
 
 @interface PKUserInfoBoard : PKBaseBoard
 
+- (void)submit;
+
+- (void)reloadData;
+
 @end

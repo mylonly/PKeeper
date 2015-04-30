@@ -1,7 +1,7 @@
 10
 
 dir
-105
+109
 svn://txg@www.mylonly.com/repositories/PKeeper/IOS/PKeeper/PKeeper/Vendor/UpYunSDK2.0/AFNetworking/AFNetworking
 svn://txg@www.mylonly.com/repositories
 
@@ -94,40 +94,6 @@ txg
 
 26500
 
-AFSecurityPolicy.h
-file
-
-
-
-
-2015-04-20T15:44:13.000000Z
-f5d059326fd962312993258b9e5f37fb
-2015-04-09T02:16:27.594288Z
-98
-txg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5152
-
 AFNetworking.h
 file
 
@@ -161,6 +127,40 @@ txg
 
 
 1866
+
+AFSecurityPolicy.h
+file
+
+
+
+
+2015-04-20T15:44:13.000000Z
+f5d059326fd962312993258b9e5f37fb
+2015-04-09T02:16:27.594288Z
+98
+txg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5152
 
 AFSecurityPolicy.m
 file
@@ -400,14 +400,14 @@ txg
 
 27654
 
-AFURLRequestSerialization.h
+AFHTTPRequestOperation.h
 file
 
 
 
 
 2015-04-20T15:44:13.000000Z
-31edd4f7a793e830ce5d01cab959ba98
+0f4e6f8b8d01cd45c140a12442c407eb
 2015-04-09T02:16:27.594288Z
 98
 txg
@@ -432,7 +432,7 @@ txg
 
 
 
-21282
+4464
 
 AFHTTPRequestOperationManager.m
 file
@@ -468,14 +468,14 @@ txg
 
 10713
 
-AFHTTPRequestOperation.h
+AFURLRequestSerialization.h
 file
 
 
 
 
 2015-04-20T15:44:13.000000Z
-0f4e6f8b8d01cd45c140a12442c407eb
+31edd4f7a793e830ce5d01cab959ba98
 2015-04-09T02:16:27.594288Z
 98
 txg
@@ -500,7 +500,7 @@ txg
 
 
 
-4464
+21282
 
 AFNetworkReachabilityManager.m
 file

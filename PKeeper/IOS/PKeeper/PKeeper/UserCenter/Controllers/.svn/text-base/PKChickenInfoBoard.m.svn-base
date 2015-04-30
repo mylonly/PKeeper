@@ -22,6 +22,7 @@
 #define PICKSHEET_CLEARSHITTYPETAG 1007
 #define PICKSHEET_CHICKENAGETAG 1008
 #define PICKSHEET_CHICKENTIMETAG 1009
+#define PICKSHEET_CHICKEN_IN_TAG 1010
 
 @interface PKChickenInfoBoard ()<UITableViewDataSource,UITableViewDelegate,UIPickerSheetDelegate,BBYAddImageGridCellDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,QBImagePickerControllerDelegate>
 {
@@ -52,6 +53,7 @@
     m_itemArray = @[@{@"title":@"鸡场名称",@"valueKey":@"houseName",@"editType":[NSNumber numberWithInt:EDITTYPE_TEXT]},
                     @{@"title":@"鸡场地址",@"valueKey":@"houseAddress",@"editType":[NSNumber numberWithInt:EDITTYPE_TEXT]},
                     @{@"title":@"鸡场规模",@"valueKey":@"houseScaleTypeStr",@"editType":[NSNumber numberWithInt:EDITTYPE_MULTISELECT]},
+                    @{@"title":@"进鸡时间",@"valueKey":@"ChickenTime",@"editType":[NSNumber numberWithInt:EDITTYPE_TIME]},
                     @{@"title":@"建厂时间",@"valueKey":@"houseCreatedTime",@"editType":[NSNumber numberWithInt:EDITTYPE_TIME]},
                     @{@"title":@"肉鸡类型",@"valueKey":@"chickenTypeStr",@"editType":[NSNumber numberWithInt:EDITTYPE_MULTISELECT]},
                     @{@"title":@"养殖方式",@"valueKey":@"farmTypeStr",@"editType":[NSNumber numberWithInt:EDITTYPE_MULTISELECT]},
@@ -96,6 +98,24 @@
     }
     [[PKChickenHouseModel shareInstance] submitChickenInfo];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)submit
+{
+    for (id data in m_imageDatas)
+    {
+        if ([data isKindOfClass:[NSData class]])
+        {
+            [[PKChickenHouseModel shareInstance].imageDataArray addObject:data];
+        }
+    }
+    [[PKChickenHouseModel shareInstance] submitChickenInfo];
+    [[FKHUDHelper shareInstance] presentLoadingTips:@"提交信息..." fromView:self.container];
+}
+
+- (void)reloadData
+{
+    [m_tableView reloadData];
 }
 
 #pragma tableview datasource
@@ -177,9 +197,19 @@
     }
     else if (itemType == EDITTYPE_TIME)
     {
-        DatePickerSheet* datePicker = [[DatePickerSheet alloc] initWithTitle:@"选择建厂时间" delegate:self];
-        datePicker.tag = PICKSHEET_CHICKENTIMETAG;
-        [datePicker showInView:self.view];
+        NSString* title = [item valueForKey:@"title"];
+        if ([title isEqualToString:@"建厂时间"])
+        {
+            DatePickerSheet* datePicker = [[DatePickerSheet alloc] initWithTitle:@"选择建厂时间" delegate:self];
+            datePicker.tag = PICKSHEET_CHICKENTIMETAG;
+            [datePicker showInView:self.container];
+        }
+        else
+        {
+            DatePickerSheet* datePicker = [[DatePickerSheet alloc] initWithTitle:@"选择进鸡时间" delegate:self];
+            datePicker.tag = PICKSHEET_CHICKEN_IN_TAG;
+            [datePicker showInView:self.container];
+        }
     }
     else if (itemType == EDITTYPE_MULTISELECT)
     {
@@ -189,56 +219,56 @@
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择规模" delegate:self];
             picker.tag = PICKSHEET_CHICKENSCALETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].houseScaleTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if([title isEqualToString:@"肉鸡类型"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择肉鸡类型" delegate:self];
             picker.tag = PICKSHEET_CHICKENTAPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].chickenTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"养殖方式"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择养殖方式" delegate:self];
             picker.tag = PICKSHEET_FARMTYPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].farmTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"鸡舍类型"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择鸡舍类型" delegate:self];
             picker.tag = PICKSHEET_CHICKHOUSETYPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].chickenHouseTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"供水方式"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择供水方式" delegate:self];
             picker.tag = PICKSHEET_SUPPORTWATERTYPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].supportWaterTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"供料方式"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择供料方式" delegate:self];
             picker.tag = PICKSHEET_SUPPORTFOODTYPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].supportFoodTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"清粪方式"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择清粪方式" delegate:self];
             picker.tag = PICKSHEET_CLEARSHITTYPETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].clearShitTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
         else if ([title isEqualToString:@"鸡群组成"])
         {
             SinglePickerSheet* picker = [[SinglePickerSheet alloc] initWithTitle:@"选择鸡群方式" delegate:self];
             picker.tag = PICKSHEET_CHICKENAGETAG;
             picker.itemArray = [PKChickenHouseModel shareInstance].chickenAgeTypeAry;
-            [picker showInView:self.view];
+            [picker showInView:self.container];
         }
     }
 }
@@ -307,6 +337,11 @@
     else if (sheet.tag == PICKSHEET_CHICKENTAPETAG)
     {
         [PKChickenHouseModel shareInstance].chickenType = pickerSheet.pickerIndex + 1;
+    }
+    else if (sheet.tag == PICKSHEET_CHICKEN_IN_TAG)
+    {
+        DatePickerSheet* datePicker = (DatePickerSheet*)sheet;
+        [PKChickenHouseModel shareInstance].ChickenTime = datePicker.dateString;
     }
     else if (sheet.tag == PICKSHEET_FARMTYPETAG)
     {

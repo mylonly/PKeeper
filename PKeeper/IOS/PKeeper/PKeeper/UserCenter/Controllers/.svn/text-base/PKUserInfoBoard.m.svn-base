@@ -74,6 +74,29 @@
     [[FKHUDHelper shareInstance] presentLoadingTips:@"提交个人信息"];
 }
 
+- (void)submit
+{
+    NSDictionary* param = @{@"userid":[PKUserModel shareInstance].userID,
+                            @"realName":[PKUserModel shareInstance].realName,
+                            @"workyear":[PKUserModel shareInstance].workYear,
+                            @"age":[PKUserModel shareInstance].age,
+                            @"gender":[PKUserModel shareInstance].gender,
+                            @"email":[PKUserModel shareInstance].email,
+                            @"mobile":[PKUserModel shareInstance].mobile,
+                            @"qq":[PKUserModel shareInstance].qqNum,
+                            @"address":[PKUserModel shareInstance].address,
+                            @"province":[PKUserModel shareInstance].province,
+                            @"city":[PKUserModel shareInstance].city,
+                            @"picAddress":[PKUserModel shareInstance].avatarUrl};
+    ASIHTTPRequest* request = [JSHttpHelper get:SUBMIT_USERINFO withValue:param withDelegate:self withUserInfo:@"submitUserInfo"];
+    [self addRequest:request];
+}
+
+- (void)reloadData
+{
+    [m_tableView reloadData];
+}
+
 - (void)requestDidFailed:(ASIHTTPRequest *)theRequest
 {
     [super requestDidFailed:theRequest];
@@ -273,7 +296,7 @@
         SinglePickerSheet* genderPicker = [[SinglePickerSheet alloc] initWithTitle:@"选择性别" delegate:self];
         genderPicker.tag = PICKERSHEET_GENDER_TAG;
         genderPicker.itemArray = @[@"男",@"女"];
-        [genderPicker showInView:self.view];
+        [genderPicker showInView:self.container];
     }
     else if (itemType == EDITTYPE_AGE)
     {
@@ -285,13 +308,13 @@
             [array addObject:[NSString stringWithFormat:@"%d",i]];
         }
         [agePicker setItemArray:array];
-        [agePicker showInView:self.view];
+        [agePicker showInView:self.container];
     }
     else if (itemType == EDITTYPE_ADDRESS)
     {
         TSLocateView* locate = [[TSLocateView alloc] initWithTitle:@"选择城市" delegate:self];
         locate.tag = PICKERSHEET_ADDRESS_TAG;
-        [locate showInView:self.view];
+        [locate showInView:self.container];
     }
     else if (itemType == EDITTYPE_MULTISELECT)
     {
@@ -305,7 +328,7 @@
                 [array addObject:[NSString stringWithFormat:@"%d",i]];
             }
             [agePicker setItemArray:array];
-            [agePicker showInView:self.view];
+            [agePicker showInView:self.container];
         }
     }
 }
